@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: aich
-Version: 0.0.1
+Version: 0.0.2
 Summary: Encrypt & Decrypt Words Found In A Local Dictionary. Helpful In Tokenizing Blockchain Wallet Passwords.
 Home-page: https://github.com/arijitaich/AICH-Encryption
 Author: Arijit Aich
