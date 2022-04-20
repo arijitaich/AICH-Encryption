@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="aich",
-    version="0.0.1",
+    version="0.0.2",
     author="Arijit Aich",
     author_email="a2.arijitaich@gmail.com",
     description="Encrypt & Decrypt Words Found In A Local Dictionary. Helpful In Tokenizing Blockchain Wallet Passwords.",

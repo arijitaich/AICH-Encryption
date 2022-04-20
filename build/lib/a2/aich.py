@@ -8,7 +8,7 @@ def aichin(search_word):
     words = {}
     ctr = 0
     encrypted = ''
-    with open('dict.txt') as f:
+    with open('a2/dict.txt') as f:
             lines = [line.rstrip('\n') for line in f]
     for line in lines:  
             words[line.lower()] = ctr
@@ -28,7 +28,7 @@ def aichout(search_word):
     words = {}
     ctr = 0
     encrypted = ''
-    with open('dict.txt') as f:
+    with open('a2/dict.txt') as f:
             lines = [line.rstrip('\n') for line in f]
     for line in lines:  
             words[ctr] = line.lower()
