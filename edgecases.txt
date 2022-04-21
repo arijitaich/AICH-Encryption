@@ -51,6 +51,9 @@ DEC:
 ##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
 
 
+There is also another way. We can use the not found words to increase the keyword content of the file. So when a keyword is not present, we just insert it, get the key and pass it 
+to the rest of the code. That way it encrypt everything.
+
 
 
 Case #4
@@ -98,4 +101,7 @@ DEC:
 #STATE >> Entry of multiple data types including a line break
 
 ##REASON >> Same as STATE, Remedy is to create an encryption letter by letter as mentioned in Case #4 Remedy.
+
+
+
 
