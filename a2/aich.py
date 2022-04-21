@@ -19,17 +19,16 @@ def readictionary(handle):
 
 # Encrypt
 # ================
-def aichin(search_word):
-    words = {}
-    phrase = search_word.split(' ')
+def aichin(search_word_enc):
+    phrase_enc = search_word_enc.split(' ')
     encrypted = ''
-    words = readictionary('enc')
+    words_enc = readictionary('enc')
 
-    for p in phrase:
-            if p.lower() in words:
-                position = hex(words.get(p.lower()))
+    for p_enc in phrase_enc:
+            if p_enc.lower() in words_enc:
+                position = hex(words_enc.get(p.lower()))
             else:
-                    position = p
+                position = p_enc
             encrypted = encrypted + str(position) + '.'        
     return (encrypted)
 
@@ -37,15 +36,15 @@ def aichin(search_word):
 
 # Decrypt
 # ================
-def aichout(search_word2):
-        phrase2 = search_word2.split('.')
-        words2 = readictionary('dec')
+def aichout(search_word_dec):
+        phrase_dec = search_word_dec.split('.')
+        words_dec = readictionary('dec')
         decrypted = ''
 
-        for p2 in phrase2:
+        for p_dec in phrase_dec:
                 try:
-                        tmp = words2[int(p2, 16)]
+                        tmp = words_dec[int(p_dec, 16)]
                 except:
-                        tmp = p2
+                        tmp = p_dec
                 decrypted = decrypted + str(tmp) + ' '        
         print (decrypted)
