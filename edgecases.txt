@@ -52,7 +52,7 @@ DEC:
 
 
 SOLUTION >> There is also another way. We can use the not found words to increase the keyword content of the file. So when a keyword is not present, we just insert it, get the key and pass it 
-to the rest of the code. That way it encrypt everything.
+to the rest of the code. That way it will encrypt everything.
 
 
 
@@ -85,7 +85,7 @@ DEC:
 
 ##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
 
-Can be Eliminated Using Case # Solution
+Can be Eliminated Using Case #3 Solution
 
 
 
