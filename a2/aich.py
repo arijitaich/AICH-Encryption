@@ -35,6 +35,7 @@ def aichout(search_word2):
     for line2 in lines2:  
             words2[ctr2] = line2.lower()
             ctr2 = ctr2 + 1
+            
 
     # print (phrase)
     for p2 in phrase2:        
