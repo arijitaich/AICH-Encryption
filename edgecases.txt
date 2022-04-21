@@ -2,7 +2,7 @@
 ----------------------------
 
 
-Case #1
+Case #1 - ELIMINATED
 ------------------
 ENC:
     Input:  Hello there minerva.
@@ -33,7 +33,7 @@ DEC:
 ##REASON >> When checking the data, we are not checking for exact case but both sides on lower case. What we need to do is when we are storing the values when found, 
 it should be the exact value that is being passed on.
 
-
+Can be eliminated using Case 3 Solution.
 
 
 
@@ -51,7 +51,7 @@ DEC:
 ##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
 
 
-There is also another way. We can use the not found words to increase the keyword content of the file. So when a keyword is not present, we just insert it, get the key and pass it 
+SOLUTION >> There is also another way. We can use the not found words to increase the keyword content of the file. So when a keyword is not present, we just insert it, get the key and pass it 
 to the rest of the code. That way it encrypt everything.
 
 
@@ -69,6 +69,8 @@ DEC:
 
 ##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
 
+Can be eliminated using case 3 solution
+
 
 Case #5
 ------------------
@@ -82,6 +84,9 @@ DEC:
 #STATE >> The system is not encrypting numbers and words not found in the dictionary.
 
 ##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
+
+Can be Eliminated Using Case # Solution
+
 
 
 
@@ -102,6 +107,6 @@ DEC:
 
 ##REASON >> Same as STATE, Remedy is to create an encryption letter by letter as mentioned in Case #4 Remedy.
 
-
+Can be eliminated using CASE 3 Soltion.
 
 
