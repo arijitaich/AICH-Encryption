@@ -1,5 +1,6 @@
 
 # File Processor
+# ==============
 def readictionary(handle):
     filename = 'a2/dict.txt'
     words = {}

@@ -1,7 +1,8 @@
 # AICH Encryption Edge Cases
 ----------------------------
 
-Encryption Case #1
+
+Case #1
 ------------------
 ENC:
     Input:  Hello there minerva.
@@ -18,6 +19,83 @@ ValueError: invalid literal for int() with base 16: ''
 ##REASON >> We have to sanitize the last slot for presence of DOT (.) if values present after that.
 
 
+Case #2
+------------------
+ENC:
+    Input:  Brilliant.
+    Output: 0xc743.
+DEC:
+    Input: 0xc743.
+    Output: brilliant
 
-What is happening for upper and lower Case
+#STATE >> The case is changing which changes the entire key. So all process should be case sensitive free.
+
+##REASON >> When checking the data, we are not checking for exact case but both sides on lower case. What we need to do is when we are storing the values when found, 
+it should be the exact value that is being passed on.
+
+
+
+
+
+Case #3
+------------------
+ENC:
+    Input:  7063495210.
+    Output: 7063495210.
+DEC:
+    Input: 7063495210.
+    Output: 7063495210
+
+#STATE >> The system is not encrypting numbers and words not found in the dictionary.
+
+##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
+
+
+
+
+Case #4
+------------------
+ENC:
+    Input:  7063495210.
+    Output: 7063495210.
+DEC:
+    Input: 7063495210.
+    Output: 7063495210
+
+#STATE >> The system is not encrypting numbers and words not found in the dictionary.
+
+##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
+
+
+Case #4
+------------------
+ENC:
+    Input:  'Paracetamol'.'%\n \n Jungle:
+    Output: 'Paracetamol'.'%\n.\n.Jungle:.
+DEC:
+    Input: 7063495210.
+    Output: 7063495210
+
+#STATE >> The system is not encrypting numbers and words not found in the dictionary.
+
+##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
+
+
+
+Case #5
+------------------
+ENC:
+    Input:  Jubmle Bumble Kambla Sitambla Hirimba Hi Honolulu Heya Hello Pirates Or The Caribbean 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 Hello everybody, this is Arijit Aich
+typing in on the notepad and testing out the script. I am loving python in details...... :)
+
+    Output: Jubmle.0xd1f4.Kambla.Sitambla.Hirimba.0x2a56b.0x2be91.Heya.0x29a65.0x48d11.0x42217.0x62a83.0xeafd.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.0x29a65.everybody,.0x6322a.0x3057e.Arijit.Aich..
+
+DEC:
+    Input: Jubmle.0xd1f4.Kambla.Sitambla.Hirimba.0x2a56b.0x2be91.Heya.0x29a65.0x48d11.0x42217.0x62a83.0xeafd.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.0x29a65.everybody,.0x6322a.0x3057e.Arijit.Aich..
+
+    Output: Jubmle bumble Kambla Sitambla Hirimba hi honolulu Heya hello pirates or the caribbean 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 hello everybody, this is Arijit Aich
+
+#STATE >> Entry of multiple data types including a line break
+
+##REASON >> Same as STATE, Remedy is to create an encryption letter by letter as mentioned in Case #4 Remedy.
 
