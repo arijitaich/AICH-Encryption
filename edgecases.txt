@@ -1,0 +1,36 @@
+# AICH Encryption Edge Cases
+----------------------------
+
+Encryption Case #1
+------------------
+ENC:
+    Input:  Hello there minerva.
+    Output: 0x29a65.0x62ce2.0x3a4fb.
+DEC:
+    Input: 0x29a65.0x62ce2.0x3a4fb.
+    Output: /usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (1.26.9) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Traceback (most recent call last):
+  File "decrypt.py", line 14, in <module>
+    if (int(p, 16)):
+ValueError: invalid literal for int() with base 16: ''
+
+##REASON >> We have to sanitize the last slot for presence of DOT (.) if values present after that.
+
+
+Encryption Case #2
+------------------
+ENC:
+    Input:  Hello there minerva.
+    Output: 0x29a65.0x62ce2.0x3a4fb.
+DEC:
+    Input: 0x29a65.0x62ce2.0x3a4fb.
+    Output: /usr/lib/python3/dist-packages/requests/__init__.py:89: RequestsDependencyWarning: urllib3 (1.26.9) or chardet (3.0.4) doesn't match a supported version!
+  warnings.warn("urllib3 ({}) or chardet ({}) doesn't match a supported "
+Traceback (most recent call last):
+  File "decrypt.py", line 14, in <module>
+    if (int(p, 16)):
+ValueError: invalid literal for int() with base 16: ''
+
+##REASON >> We have to sanitize the last slot for presence of DOT (.) if values present after that.
+
