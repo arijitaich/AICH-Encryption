@@ -23,7 +23,7 @@ def aichin(search_word):
     words = {}
     phrase = search_word.split(' ')
     encrypted = ''
-    words = readictionary()
+    words = readictionary('enc')
 #     with open('a2/dict.txt') as f:
 #             lines = [line.rstrip('\n') for line in f]
 #     for line in lines:  
@@ -44,8 +44,8 @@ def aichin(search_word):
 # ================
 def aichout(search_word2):
         phrase2 = search_word2.split('.')
-        words2 = readictionary()
-        ctr2 = 0
+        words2 = readictionary('dec')
+        # ctr2 = 0
         decrypted = ''
         # with open('Work/words.txt') as f2:
         #         lines2 = [line2.rstrip('\n') for line2 in f2]
