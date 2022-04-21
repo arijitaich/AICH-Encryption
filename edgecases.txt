@@ -67,7 +67,7 @@ DEC:
 ##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
 
 
-Case #4
+Case #5
 ------------------
 ENC:
     Input:  'Paracetamol'.'%\n \n Jungle:
@@ -82,7 +82,7 @@ DEC:
 
 
 
-Case #5
+Case #6
 ------------------
 ENC:
     Input:  Jubmle Bumble Kambla Sitambla Hirimba Hi Honolulu Heya Hello Pirates Or The Caribbean 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 Hello everybody, this is Arijit Aich
