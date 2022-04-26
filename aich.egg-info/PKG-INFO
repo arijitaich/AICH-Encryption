@@ -1,7 +1,7 @@
 Metadata-Version: 2.1
 Name: aich
-Version: 0.0.3
-Summary: Encrypt & Decrypt Words Found In A Local Dictionary. Helpful In Tokenizing Blockchain Wallet Passwords.
+Version: 0.0.4
+Summary: Encrypt & Decrypt Words, Phrases & Letters.
 Home-page: https://github.com/arijitaich/AICH-Encryption
 Author: Arijit Aich
 Author-email: a2.arijitaich@gmail.com
@@ -17,11 +17,15 @@ Description: # AICH-Encryption
         from a2 import aich
         
         search_word = input('Enter your encryption phrase:')
+        
         encrypted = aich.aichin(search_word)
+        
         print (encrypted)
         
         search_word = input('Enter your decryption phrase:')
+        
         encrypted = aich.aichout(search_word)
+        
         print (encrypted)
         
         # Encryption Example

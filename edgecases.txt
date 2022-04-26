@@ -102,4 +102,66 @@ DEC:
 
 Can be eliminated using CASE 3 Soltion.
 
-## Expected Output >> 'Paracetamol'.'%\n \n Jungle:
+##Expected Output >> 0xc743.
+
+
+
+
+Case #7 
+------------------
+ENC:
+    Input:  hello......
+
+    Output: Jubmle.0xd1f4.Kambla.Sitambla.Hirimba.0x2a56b.0x2be91.Heya.0x29a65.0x48d11.0x42217.0x62a83.0xeafd.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.0x29a65.everybody,.0x6322a.0x3057e.Arijit.Aich..
+
+DEC:
+    Input: Jubmle.0xd1f4.Kambla.Sitambla.Hirimba.0x2a56b.0x2be91.Heya.0x29a65.0x48d11.0x42217.0x62a83.0xeafd.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.0x29a65.everybody,.0x6322a.0x3057e.Arijit.Aich..
+
+    Output: Jubmle bumble Kambla Sitambla Hirimba hi honolulu Heya hello pirates or the caribbean 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 hello everybody, this is Arijit Aich
+
+#DESCRIPTION >> Entry of multiple data types including a line break
+
+##REASON >> Same as STATE, Remedy is to create an encryption letter by letter as mentioned in Case #4 Remedy.
+
+Can be eliminated using CASE 3 Soltion.
+
+##Expected Output >> 0xc743.
+
+
+
+THINGS TO DO:
+=============
+dont use same name again for different context
+
+2. extract common functionality in a different method/function
+
+3. use appropriate / optimum data structure … e.g. List in decrypt method
+
+4. try to reuse the List in encrypt also - may or maynot work for all programs - for this program, you can sort the list & use binary search in the encrypt() method
+
+5. design decision - should the encrypt/descrypt have knowledge (access) to the list of words …
+
+6. make sure you run your programs for edge cases - document (or atleast you know) the behaviour for those edge cases (edited) 
+
+
+TODO.1 - create a list of edge cases for this program and run the program to document what happens (edited) 
+
+TODO.2 - update the program for items 1 / 2 & 3 … - create a new branch, then a PR and merge it back to main branch (edited) 
+
+TODO.3 - update the program for item 4 - create a separate branch, then a PR to merge it back to main branch (edited) 
+
+TODO.4 - update the program for item 5
+
+
+What It Should Do:
+------------------
+1. Can convert any phrase into encrypted string.
+2. Can convert any word into encrypted string.
+3. Can convert any letter into encrypted string.
+4. Can convert any special characters into encrypted string.
+5. Can convert any numbers into encrypted string.
+6. Should take in a SECRET KEY during creation to validate during decryption.
+7. Should contain timestamp for expiry.
+8. Encrypted Language Should Not Be Readable.
+9. Handle For Blank Fields.
+

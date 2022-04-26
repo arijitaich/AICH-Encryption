@@ -27,7 +27,7 @@ def aichin(search_word_enc):
 
     for p_enc in phrase_enc:
             if p_enc.lower() in words_enc:
-                position = hex(words_enc.get(p.lower()))
+                position = hex(words_enc.get(p_enc.lower()))
             else:
                 position = p_enc
             encrypted = encrypted + str(position) + '.'        
