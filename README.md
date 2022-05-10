@@ -1,6 +1,5 @@
 # AICH-Encryption
- Encryption Algorithm
-
+ Encryption Algorithm for All Languages. 
 
 # Installation
 sudo pip install aich
@@ -21,9 +20,10 @@ encrypted = aich.aichout(search_word)
 print (encrypted)
 
 # Encryption Example
+{Inputs: ये है आज़ादी , Outputs: vxfjvwsjxhjvrvjvwgjxhjvhujvocjvrcjvrejvxujvwh}
 {Inputs: this is freedom , Outputs: swjugjuvjsrjxhjuvjsrjxhjuujsxjuzjuzjuwjufjud}
 
 # Decryption Example
+{Inputs: vxfjvwsjxhjvrvjvwgjxhjvhujvocjvrcjvrejvxujvwh, Outputs: ये है आज़ादी}
 {Inputs: swjugjuvjsrjxhjuvjsrjxhjuujsxjuzjuzjuwjufjud , Outputs: this is freedom}
-
 
