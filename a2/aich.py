@@ -34,7 +34,7 @@ def aichin(phrase):
         p1 = ""
         for s in f1:
                 if s.isalpha() == True:
-                        p1 = p1 + "" + s
+                        p1 = p1 + "" + l[s]
                 elif  s.isalpha != True and s != '_':
                         p1 = p1 + "" + l[s]
                 else:
@@ -52,7 +52,7 @@ def aichout(phrase):
         
         l = {v: k for k, v in l.items()}
         
-        l1 = phrase.split("j")
+        l1 = phrase.split(list(l.keys())[-1])
         # print (l)
          
         p2 = []
@@ -61,7 +61,7 @@ def aichout(phrase):
             # print(l2)
             p1 = "" 
             for s in l2:
-
+                s = str(s)
                 if s not in hexlib and l[s] != '':
                     p1 = p1 + "" + l[s]
                 else:
@@ -75,8 +75,10 @@ def aichout(phrase):
 
 # Mapper
 def get_list():
-    l = {'1': {'0':'h', '1':'o', '2':'x', '3':'r', '4':'w', '5':'z', '6':'u', '7':'s', '8':'g', '9':'v', '_':'j'}}
-    return l['1']
+    l = {'1': {'0':'h', '1':'o', '2':'x', '3':'r', '4':'w', '5':'z', '6':'u', '7':'s', '8':'g', '9':'v', '_':'j'},
+                '2': {'0':'म', '1':'ण', '2':'य', '3':'क', '4':'न', '5':'ष', '6':'द', '7':'ख', '8':'प', '9':'श', 'a':'ह','b':'ज','c':'ट','d':'त','e':'ए','f':'ग', '_':'फ'}}
+
+    return l['2']
 
 # Mapping Key Date Handler
 def date_add(ini_date):

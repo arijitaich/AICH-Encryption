@@ -1,5 +1,5 @@
 # AICH-Encryption
- Encryption Algorithm for All Languages. 
+ Encryption Algorithm for All Languages. Generates a Token In Hindi. 
 
 # Installation
 sudo pip install aich
@@ -20,10 +20,10 @@ encrypted = aich.aichout(search_word)
 print (encrypted)
 
 # Encryption Example
-{Inputs: ये है आज़ादी , Outputs: vxfjvwsjxhjvrvjvwgjxhjvhujvocjvrcjvrejvxujvwh}
-{Inputs: this is freedom , Outputs: swjugjuvjsrjxhjuvjsrjxhjuujsxjuzjuzjuwjufjud}
+{Inputs: This is freedom ये है आज़ादी , Outputs: षनफदपफदशफखकफयमफदशफखकफयमफददफखयफदषफदषफदनफदगफदतफयमफशयगफशनखफयमफशकशफशनपफयमफशमदफशणटफशकटफशकएफशयदफशनम}
+{Inputs: AICH , Outputs: नणफनशफनकफनप}
 
 # Decryption Example
-{Inputs: vxfjvwsjxhjvrvjvwgjxhjvhujvocjvrcjvrejvxujvwh, Outputs: ये है आज़ादी}
-{Inputs: swjugjuvjsrjxhjuvjsrjxhjuujsxjuzjuzjuwjufjud , Outputs: this is freedom}
+{Inputs: षनफदपफदशफखकफयमफदशफखकफयमफददफखयफदषफदषफदनफदगफदतफयमफशयगफशनखफयमफशकशफशनपफयमफशमदफशणटफशकटफशकएफशयदफशनम, Outputs: This is freedom ये है आज़ादी}
+{Inputs: नणफनशफनकफनप , Outputs: AICH}
 
