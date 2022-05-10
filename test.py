@@ -6,3 +6,5 @@ decrypted = aich.aichout(encrypted)
 print (encrypted)
 print ('\n')
 print (decrypted)
+
+# print (aich.aichin())
