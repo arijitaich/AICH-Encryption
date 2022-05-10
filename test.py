@@ -1,6 +1,4 @@
 from a2 import aich
-import random
-
 
 def get_word_list(language):
     lang_layer = {'eng':'a2/dict.txt', 'hin':'a2/hindi_dict.txt'}
