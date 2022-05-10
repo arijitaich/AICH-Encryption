@@ -1,5 +1,5 @@
 # AICH-Encryption
- Encrypt Words Found In A Dictionary. Helpful In Tokenizing Blockchain Wallet Passwords.
+ Encryption Algorithm
 
 
 # Installation
@@ -21,9 +21,9 @@ encrypted = aich.aichout(search_word)
 print (encrypted)
 
 # Encryption Example
-{Inputs: this is freedom , Outputs: 0x6322a.0x3057e.0x23cef.}
+{Inputs: this is freedom , Outputs: swjugjuvjsrjxhjuvjsrjxhjuujsxjuzjuzjuwjufjud}
 
 # Decryption Example
-{Inputs: 0x6322a.0x3057e.0x23cef , Outputs: this is freedom}
+{Inputs: swjugjuvjsrjxhjuvjsrjxhjuujsxjuzjuzjuwjufjud , Outputs: this is freedom}
 
 
