@@ -6,8 +6,11 @@ from a2 import aich
 search_word = input('Enter your encryption phrase:') 
 encrypted = aich.aichin(search_word)
 decrypted = aich.aichout(encrypted) 
+print ('')
+print ('AICH Encrypted Value: ')
 print (encrypted)
-print ('\n')
+print ('')
+print ('AICH Decrypted Value: ')
 print (decrypted)
 
 # Test For All Printable Ascii Characters.

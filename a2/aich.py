@@ -27,20 +27,20 @@ def find_word(start_letter, end_letter, length):
 # Encrypt
 # ================
 def aichin(phrase):
-        l = get_list()
+        map_list = get_list()
      
-        f1 = '_'.join(format(ord(x), 'x') for x in phrase)
+        hex_string = '_'.join(format(ord(x), 'x') for x in phrase)
         # print (f1)
-        p1 = ""
-        for s in f1:
-                if s.isalpha() == True:
-                        p1 = p1 + "" + l[s]
-                elif  s.isalpha != True and s != '_':
-                        p1 = p1 + "" + l[s]
+        encrypted_value = ""
+        for letter_in_hex in hex_string:
+                if letter_in_hex.isalpha() == True:
+                        encrypted_value = encrypted_value + "" + map_list[letter_in_hex]
+                elif  letter_in_hex.isalpha != True and letter_in_hex != '_':
+                        encrypted_value = encrypted_value + "" + map_list[letter_in_hex]
                 else:
-                        p1 = p1 + "" + l[s]
+                        encrypted_value = encrypted_value + "" + map_list[letter_in_hex]
         # print (str(p1))
-        return (p1)
+        return (encrypted_value)
 
 
 
@@ -48,30 +48,30 @@ def aichin(phrase):
 # ================
 def aichout(phrase):
         phrase = str(phrase)
-        l = get_list()
+        map_list = get_list()
         
-        l = {v: k for k, v in l.items()}
+        map_list = {v: k for k, v in map_list.items()}
         
-        l1 = phrase.split(list(l.keys())[-1])
+        words_in_phrase = phrase.split(list(map_list.keys())[-1])
         # print (l)
          
         p2 = []
         hexlib = ['a', 'b', 'c', 'd', 'e', 'f']
-        for l2 in l1:
+        for each_word in words_in_phrase:
             # print(l2)
             p1 = "" 
-            for s in l2:
-                s = str(s)
-                if s not in hexlib and l[s] != '':
-                    p1 = p1 + "" + l[s]
+            for letter_in_word in each_word:
+                letter_in_word = str(letter_in_word)
+                if letter_in_word not in hexlib and map_list[letter_in_word] != '':
+                    p1 = p1 + "" + map_list[letter_in_word]
                 else:
-                    p1 = p1 + "" + s
+                    p1 = p1 + "" + letter_in_word
             p2.append(format(int(p1, 16), 'd'))
         # print (p2)
         
-        f1 = ''.join(chr(int(x)) for x in p2)
+        decrypted_value = ''.join(chr(int(x)) for x in p2)
         # print (str(f1))
-        return f1
+        return decrypted_value
 
 # Mapper
 def get_list():
