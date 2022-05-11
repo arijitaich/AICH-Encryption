@@ -5,10 +5,10 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="aich",
-    version="0.0.4",
+    version="0.0.5",
     author="Arijit Aich",
     author_email="a2.arijitaich@gmail.com",
-    description="Encrypt & Decrypt Words, Phrases & Letters.",
+    description="Encrypt Words From Any Language. Get Token In Hindi.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/arijitaich/AICH-Encryption",
