@@ -1,6 +1,5 @@
 # AICH-Encryption
- Encrypt Words Found In A Dictionary. Helpful In Tokenizing Blockchain Wallet Passwords.
-
+ Encryption Algorithm for All Languages. Generates a Token In Hindi. 
 
 # Installation
 sudo pip install aich
@@ -9,17 +8,22 @@ sudo pip install aich
 from a2 import aich
 
 search_word = input('Enter your encryption phrase:')
+
 encrypted = aich.aichin(search_word)
+
 print (encrypted)
 
 search_word = input('Enter your decryption phrase:')
+
 encrypted = aich.aichout(search_word)
+
 print (encrypted)
 
 # Encryption Example
-{Inputs: this is freedom , Outputs: 0x6322a.0x3057e.0x23cef.}
+{Inputs: This is freedom ये है आज़ादी , Outputs: षनफदपफदशफखकफयमफदशफखकफयमफददफखयफदषफदषफदनफदगफदतफयमफशयगफशनखफयमफशकशफशनपफयमफशमदफशणटफशकटफशकएफशयदफशनम}
+{Inputs: AICH , Outputs: नणफनशफनकफनप}
 
 # Decryption Example
-{Inputs: 0x6322a.0x3057e.0x23cef , Outputs: this is freedom}
-
+{Inputs: षनफदपफदशफखकफयमफदशफखकफयमफददफखयफदषफदषफदनफदगफदतफयमफशयगफशनखफयमफशकशफशनपफयमफशमदफशणटफशकटफशकएफशयदफशनम, Outputs: This is freedom ये है आज़ादी}
+{Inputs: नणफनशफनकफनप , Outputs: AICH}
 

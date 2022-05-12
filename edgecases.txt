@@ -1,7 +1,8 @@
 # AICH Encryption Edge Cases
 ----------------------------
 
-Encryption Case #1
+
+Case #1 - ELIMINATED
 ------------------
 ENC:
     Input:  Hello there minerva.
@@ -17,7 +18,150 @@ ValueError: invalid literal for int() with base 16: ''
 
 ##REASON >> We have to sanitize the last slot for presence of DOT (.) if values present after that.
 
+## Expected Output >> Hello there minerva.
+
+Case #2
+------------------
+ENC:
+    Input:  Brilliant.
+    Output: 0xc743.
+DEC:
+    Input: 0xc743.
+    Output: brilliant
+
+#DESCRIPTION >> The case is changing which changes the entire key. So all process should be case sensitive free.
+
+##REASON >> When checking the data, we are not checking for exact case but both sides on lower case. What we need to do is when we are storing the values when found, 
+it should be the exact value that is being passed on.
+
+Can be eliminated using Case 3 Solution.
+
+## Expected Output >> Brilliant.
 
 
-What is happening for upper and lower Case
+Case #3
+------------------
+ENC:
+    Input:  7063495210.
+    Output: 7063495210.
+DEC:
+    Input: 7063495210.
+    Output: 7063495210
+
+#DESCRIPTION >> The system is not encrypting numbers and words not found in the dictionary.
+
+##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
+
+
+##SOLUTION >> There is also another way. We can use the not found words to increase the keyword content of the file. So when a keyword is not present, we just insert it, get the key and pass it 
+to the rest of the code. That way it will encrypt everything.
+
+
+##Expected Output >> 0x29a65. { This should add the new value to the dictionary. FEtch the location and then encrypt it. }
+
+
+
+
+
+Case #5
+------------------
+ENC:
+    Input:  'Paracetamol'.'%\n \n Jungle:
+    Output: 'Paracetamol'.'%\n.\n.Jungle:.
+DEC:
+    Input: 'Paracetamol'.'%\n.\n.Jungle:.
+    Output: 'Paracetamol'.'%\n.\n.Jungle:.
+
+#DESCRIPTION >> The system is not encrypting numbers and words not found in the dictionary.
+
+##REASON >> Same as STATE, Remedy is to create a library of each of the letters (A-Z), numbers(0-9) and special characters inside the dicitionary and then render them
+
+Can be Eliminated Using Case #3 Solution
+
+## Expected Output >> 0xc743.
+
+
+
+
+Case #6
+------------------
+ENC:
+    Input:  Jubmle Bumble Kambla Sitambla Hirimba Hi Honolulu Heya Hello Pirates Or The Caribbean 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 Hello everybody, this is Arijit Aich
+typing in on the notepad and testing out the script. I am loving python in details...... :)
+
+    Output: Jubmle.0xd1f4.Kambla.Sitambla.Hirimba.0x2a56b.0x2be91.Heya.0x29a65.0x48d11.0x42217.0x62a83.0xeafd.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.0x29a65.everybody,.0x6322a.0x3057e.Arijit.Aich..
+
+DEC:
+    Input: Jubmle.0xd1f4.Kambla.Sitambla.Hirimba.0x2a56b.0x2be91.Heya.0x29a65.0x48d11.0x42217.0x62a83.0xeafd.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.0x29a65.everybody,.0x6322a.0x3057e.Arijit.Aich..
+
+    Output: Jubmle bumble Kambla Sitambla Hirimba hi honolulu Heya hello pirates or the caribbean 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 hello everybody, this is Arijit Aich
+
+#DESCRIPTION >> Entry of multiple data types including a line break
+
+##REASON >> Same as STATE, Remedy is to create an encryption letter by letter as mentioned in Case #4 Remedy.
+
+Can be eliminated using CASE 3 Soltion.
+
+##Expected Output >> 0xc743.
+
+
+
+
+Case #7 
+------------------
+ENC:
+    Input:  hello......
+
+    Output: Jubmle.0xd1f4.Kambla.Sitambla.Hirimba.0x2a56b.0x2be91.Heya.0x29a65.0x48d11.0x42217.0x62a83.0xeafd.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.0x29a65.everybody,.0x6322a.0x3057e.Arijit.Aich..
+
+DEC:
+    Input: Jubmle.0xd1f4.Kambla.Sitambla.Hirimba.0x2a56b.0x2be91.Heya.0x29a65.0x48d11.0x42217.0x62a83.0xeafd.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.0x29a65.everybody,.0x6322a.0x3057e.Arijit.Aich..
+
+    Output: Jubmle bumble Kambla Sitambla Hirimba hi honolulu Heya hello pirates or the caribbean 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 hello everybody, this is Arijit Aich
+
+#DESCRIPTION >> Entry of multiple data types including a line break
+
+##REASON >> Same as STATE, Remedy is to create an encryption letter by letter as mentioned in Case #4 Remedy.
+
+Can be eliminated using CASE 3 Soltion.
+
+##Expected Output >> 0xc743.
+
+
+
+THINGS TO DO:
+=============
+dont use same name again for different context
+
+2. extract common functionality in a different method/function
+
+3. use appropriate / optimum data structure … e.g. List in decrypt method
+
+4. try to reuse the List in encrypt also - may or maynot work for all programs - for this program, you can sort the list & use binary search in the encrypt() method
+
+5. design decision - should the encrypt/descrypt have knowledge (access) to the list of words …
+
+6. make sure you run your programs for edge cases - document (or atleast you know) the behaviour for those edge cases (edited) 
+
+
+TODO.1 - create a list of edge cases for this program and run the program to document what happens (edited) 
+
+TODO.2 - update the program for items 1 / 2 & 3 … - create a new branch, then a PR and merge it back to main branch (edited) 
+
+TODO.3 - update the program for item 4 - create a separate branch, then a PR to merge it back to main branch (edited) 
+
+TODO.4 - update the program for item 5
+
+
+What It Should Do:
+------------------
+1. Can convert any phrase into encrypted string.
+2. Can convert any word into encrypted string.
+3. Can convert any letter into encrypted string.
+4. Can convert any special characters into encrypted string.
+5. Can convert any numbers into encrypted string.
+6. Should take in a SECRET KEY during creation to validate during decryption.
+7. Should contain timestamp for expiry.
+8. Encrypted Language Should Not Be Readable.
+9. Handle For Blank Fields.
 
